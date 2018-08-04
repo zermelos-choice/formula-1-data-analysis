@@ -1,0 +1,26 @@
+---
+title: "F1 Data Analysis"
+author: "Brad Velasquez"
+date: "8/4/2018"
+output: html_document
+---
+
+```{r}
+setwd('~/Documents/exploratory-data-analysis/formula-1-race-data')
+
+drivers<-read.csv("drivers.csv", header=T, check.names = F)
+str(drivers)
+
+qualifying.results<-read.csv("qualifying.csv", header=T,check.names = F)
+#notice that some of these results are null.
+#this makes sense noone has competed for all time.
+race.results<-read.csv("results.csv",header=T,check.names = F)
+
+```
+
+
+
+## Appendix Code
+```{r, ref.label=knitr::all_labels(),echo=TRUE,eval=FALSE}
+
+```
